@@ -24,9 +24,14 @@ function banner() {
 `;
 }
 
-// ------------------------------------------------------------------------------------------------------------
+gulp.task('build:js-prod', () => {
+  gulp
+    .src('')
+    .pipe(webpackStream(prodConfig, webpack))
+    .pipe(gulp.dest(path.resolve(dirName, 'js')));
+});
+
 // run webpack-dev-server
-// ------------------------------------------------------------------------------------------------------------
 gulp.task('run:webpack-dev-server', function() {
   const compiler = webpack(devConfig),
     server = new WebpackDevServer(compiler, devConfig.devServer);
