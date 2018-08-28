@@ -9,7 +9,8 @@ function createConfig(isDebug, options = { outputPath: '', banner: '' }) {
 
   const appEntry = {
       index: ['./_src/js/index.js'],
-      smoke: ['./_src/js/smoke.js']
+      smoke: ['./_src/js/smoke.js'],
+      canvas: ['./_src/js/canvas.js']
     },
     externals = {
       jquery: 'jQuery'
